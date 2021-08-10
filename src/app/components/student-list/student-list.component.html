@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h1>Students List coming from Student List Component</h1>
+    <a routerLink="student/add/0" class="btn btn-primary mt-5 mb-3">Add Student</a
+  >
+  <table class="table">
+    <thead>
+      <th>Student id</th>
+      <th>Student Name</th>
+      <th>Student Class</th>
+      <th>Student Roll Number</th>
+      <th>is Active</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of students">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.class }}</td>
+        <td>{{ item.roll }}</td>
+        <td>{{ item.isActive }}</td>
+        <td><a [routerLink]="['student/edit', item.id]">Edit</a></td>
+    <td>
+        <button (click)="onDelete(item.id)">Delete</button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+</div>

@@ -1,0 +1,10 @@
+<h1>Add New Students</h1>
+<hr />
+<form [formGroup]="AddForm" (ngSubmit)="collectData()">
+    <input type="text" name="studentName" formControlName="studentName" placeholder="Enter Student Name" />
+    <br /><br />
+    <input type="number" name="studentNumber" placeholder="Enter Roll number" formControlName="studentNumber" />
+    <br /><br />
+
+    <button type="button" class="btn btn-dark">Submit</button>
+</form>
